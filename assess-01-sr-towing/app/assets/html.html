@@ -1,0 +1,37 @@
+
+    <script>
+      import "swiper/css";
+      import { Swiper, SwiperSlide } from "swiper/react";
+      import { FreeMode, Keyboard, Autoplay } from "swiper/modules";
+      <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: true,
+              }}
+              freeMode={true}
+              keyboard={{
+                enabled: true,
+              }}
+              // centeredSlides={true}
+              modules={[FreeMode, Keyboard, Autoplay]}
+              breakpoints={{
+                1024: { slidesPerView: 3, },
+                767: { slidesPerView: 2, },
+                660: { slidesPerView: 1, },
+                480: { slidesPerView: 1, },
+                375: { slidesPerView: 1, },
+                300: { slidesPerView: 1, },
+              }}
+              className="mySwiper my-5"
+            >
+        <SwiperSlide>
+          <div className="serviceCard">
+            <Image src={truckOne} alt="" />
+            <p className="my-2 font-semibold">Light & Medium Towing Service</p>
+          </div>
+        </SwiperSlide>
+      </Swiper>;
+    </script>
