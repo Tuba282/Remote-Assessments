@@ -423,7 +423,7 @@ const Home = () => {
 
           {/* footer */}
           <div className="footer  flex flex-wrap  xl:justify-between lg:justify-between justify-around text-center items-center text-[var(--white)]">
-            <p  className="">© 2025 SR Towing. All rights reserved.</p>
+            <p className="">© 2025 SR Towing. All rights reserved.</p>
             <div className="flex justify-between items-center gap-4" >
               <Image src={facebook} alt="" />
               <Image src={instagram} alt="" />
