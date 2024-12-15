@@ -1,31 +1,15 @@
-import localFont from "next/font/local";
-import "./globals.css";
-import React from "react";
+import { ReactNode } from 'react';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+interface LayoutProps {
+  children: ReactNode;
+}
 
-export const metadata = {
-  title: "SR-Towing",
-  description: "SR-Towing Motors",
+const Layout = ({ children }: LayoutProps) => {
+  return (
+    <div>
+      {children}
+    </div>
+  );
 };
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
-}
+export default Layout;
